@@ -72,7 +72,7 @@ public class Teacher {
     public void SearchSubject(String searchSubject)
     {
         if (this.getSubject().equals(searchSubject)){
-            System.out.println("This is "+ this.getName() + " " + this.getSurname() + " " +  this.getDaddyname() + "\n");
+            System.out.println(this.getName() + " " + this.getSurname() + " " +  this.getDaddyname());
         }
         else {
             return;
@@ -82,7 +82,7 @@ public class Teacher {
     public void SearchJob(String searchJob)
     {
         if (this.getGender().equals("female") & this.getJob().equals(searchJob)){
-            System.out.println("This is "+ this.getName() + " " + this.getSurname() + " " +  this.getDaddyname() + "\n");
+            System.out.println(this.getName() + " " + this.getSurname() + " " +  this.getDaddyname());
         }
         else {
             return;
@@ -92,7 +92,7 @@ public class Teacher {
     @Override
     public String toString()
     {
-        return("This is "+ this.getName() + " " + this.getSurname() + " " +  this.getDaddyname() +
+        return("\nThis is "+ this.getName() + " " + this.getSurname() + " " +  this.getDaddyname() +
                 ".\nGender: " + this.getGender() +
                 ".\nCan teach u " + this.getSubject() +
                 ".\nDepartment: " + this.getDepartment() +
@@ -108,9 +108,9 @@ public class Teacher {
                 "IST", "male", "Dozent");
         Teacher teacher3 = new Teacher("Olga","Protsenko","Bogdanovna", "High Math",
                 "IST", "female", "Dozent");
-        Teacher teacher4 = new Teacher("Taras","Shevchenko","Grigorovich", "High Math",
+        Teacher teacher4 = new Teacher("Taras","Shevchenko","Grigorovich", "Ukrainian",
                 "IST", "male", "St.Vikladach");
-        Teacher teacher5 = new Teacher("Svetlana","Gurchenko","Vladimirovna", "High Math",
+        Teacher teacher5 = new Teacher("Svetlana","Gurchenko","Vladimirovna", "English",
                 "IST", "female", "Dozent");
         Teacher teacher6 = new Teacher("Oleg","Savchenko","Vladimirovich", "High Math",
                 "IST", "male", "Dozent");
@@ -134,7 +134,7 @@ public class Teacher {
         }
         System.out.println("Input job: ");
         String searchJob = in.nextLine();
-        for(int i= 0; i<9; i++){
+        for(int i = 0; i < 9; i++){
             arr[i].SearchJob(searchJob);
         }
         in.close();
